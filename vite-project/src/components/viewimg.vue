@@ -16,14 +16,18 @@
 
   <div class="postInfo">
 
+  <router-link class="userProfileLink" :to="`/profile/${userPost._id}/`">
+
     <div class="postUserInfo">
       <img class="userAvatarPost" :src="userPost.avatar[0][200]" alt="">
       <h3>{{ userPost.name }}</h3>
     </div>
 
-    <div class="postDescription">
-      <h3>{{ userPost.post.description }}</h3>
-    </div>
+  </router-link>
+
+  <div class="postDescription">
+    <h3>{{ userPost.post.description }}</h3>
+  </div>
 
   </div>
 
@@ -151,6 +155,11 @@ export default {
     padding: 20px 20px 0px 20px;
   }
 
+
+  .userProfileLink {
+    color: #000000;
+    text-decoration: none;
+  }
 
 
 </style>
